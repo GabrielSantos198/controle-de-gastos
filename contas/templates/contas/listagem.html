@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Transacao</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Gabriel">
+    <meta name="view-port", content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Uma simples landpage pra eu poder treinar minha tecnica">
+</head>
+
+<body>
+    <h1> WELCOME THE THIS PAGE </h1>
+    <ul>
+    {% for transacao in transacoes %}
+      <a href="{% url 'url_update' transacao.id %}"><li> {{ transacao.descricao  }} - {{ transacao.data }} - {{ transacao.valor }} - {{ transacao.categoria }}</li></a>
+    {% endfor %}
+    <p><a href="nova/" targert="_blank">Novo</a></p>
+    </ul>
+</body>
+
+</html>

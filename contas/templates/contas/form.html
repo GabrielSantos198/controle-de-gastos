@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+
+<head>
+    <title> Documento </title>
+    <meta charset="utf-8">
+    <meta name="view-port" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Gabriel Santana dos Santos">
+    <meta name="description" content="Pagina feita em meu treinamento no django">
+    <meta name="keyword" content="Django, Aprender, Treinamento">
+</head>
+
+<body>
+    <form  method="POST">
+        {% csrf_token %}
+        
+        {{ form.as_p }}
+        
+        <button type="submit">salvar</button>
+        {% if transacao %}
+           <a href="{% url 'url_delete' transacao.id %}">Remover</a>
+       {% endif %}
+    </form>
+</body>
+
+</html>

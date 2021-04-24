@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="author" content="Gabriel Santana">
+    <title>Django 2° Fase</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1> Seja bem vinda </h1>
+    <p>Agora são {{ now }}</p>
+    <ul>
+        {% for transacao in transacoes %}
+        
+            {% if transacao == "t1" %}
+                <li><b>{{ transacao }}</b></li>
+            {% else %}
+                <li>
+                    {{ transacao }}
+                </li>
+            {% endif %}
+            
+        {% endfor %}
+    </ul>
+</body>
+
+
+</html>
